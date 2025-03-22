@@ -1,0 +1,47 @@
+/* Center the registration form */
+.register-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Title */
+  .register-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input fields & Select dropdown */
+  .register-container input,
+  .register-container select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Buttons */
+  .register-container button {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .register-container button:hover {
+    background-color: #218838;
+  }
+  
