@@ -24,7 +24,7 @@ app.use("/api/jobs", authenticateJWT, jobRoutes);
 // Setup WebSockets
 setupSockets(io);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5433;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

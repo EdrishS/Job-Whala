@@ -5,11 +5,13 @@ const JobList = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/jobs").then((res) => setJobs(res.data));
+    axios
+      .get("http://localhost:5433/api/jobs")
+      .then((res) => setJobs(res.data));
   }, []);
 
   const applyJob = async (jobId) => {
-    await axios.post("http://localhost:5000/api/jobs/apply", { jobId });
+    await axios.post("http://localhost:5433/api/jobs/apply", { jobId });
     alert("Applied Successfully");
   };
 
@@ -19,7 +21,8 @@ const JobList = () => {
       <ul>
         {jobs.map((job) => (
           <li key={job.id}>
-            {job.title} - {job.company} <button onClick={() => applyJob(job.id)}>Apply</button>
+            {job.title} - {job.company}{" "}
+            <button onClick={() => applyJob(job.id)}>Apply</button>
           </li>
         ))}
       </ul>
@@ -28,4 +31,3 @@ const JobList = () => {
 };
 
 export default JobList;
-    

@@ -6,7 +6,7 @@ const JobPost = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/jobs/post", job);
+    await axios.post("http://localhost:5433/api/jobs/post", job);
     alert("Job Posted Successfully");
   };
 
@@ -14,9 +14,20 @@ const JobPost = () => {
     <div>
       <h2>Post a Job</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Job Title" onChange={(e) => setJob({ ...job, title: e.target.value })} />
-        <input type="text" placeholder="Company" onChange={(e) => setJob({ ...job, company: e.target.value })} />
-        <textarea placeholder="Description" onChange={(e) => setJob({ ...job, description: e.target.value })} />
+        <input
+          type="text"
+          placeholder="Job Title"
+          onChange={(e) => setJob({ ...job, title: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Company"
+          onChange={(e) => setJob({ ...job, company: e.target.value })}
+        />
+        <textarea
+          placeholder="Description"
+          onChange={(e) => setJob({ ...job, description: e.target.value })}
+        />
         <button type="submit">Post</button>
       </form>
     </div>

@@ -1,4 +1,6 @@
-const pool = require('../db');
+const express = require('express');
+const router = express.Router();
+const pool = require('../config/db');
 
 const getUsers = async (req, res) => {
   try {
